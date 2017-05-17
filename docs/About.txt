@@ -1,0 +1,17 @@
+This file will record the details of how to use each class.
+
+//2014
+
+*How to merge all events into ordered one stream, and output?
+----edu.umass.cs.sase.usecase.hadooplog.GangliaHadoopEventSorter.MergeAll()
+
+*Read content from a CSV file?
+----edu.umass.cs.sase.usecase.hadooplog.GangliaHadoopEventSorter.readCSV()
+
+
+*read events between a time interval
+----edu.umass.cs.sase.usecase.hadooplog.GangliaHadoopEventSorter.readCSVBetweenInterval()
+
+
+*read events between a time interval and label as normal, abnormal
+-----edu.umass.cs.sase.usecase.hadooplog.LabelData

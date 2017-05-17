@@ -1,0 +1,4 @@
+
+2015-06-08:
+-explanation.featuregenation.RawEventReader.getTimestamp()
+Solved: hadoop events and ganglia events should be treated with different methods

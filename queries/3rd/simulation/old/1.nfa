@@ -1,0 +1,14 @@
+SelectionStrategy = skip-till-next-match | TimeWindow = 5000 | partitionAttribute = symbol
+State=1 & type = kleeneClosure  & eventtype = stock | edgetype = begin  & price % 8 = 0 | edgetype = take & price % 9 == 0  | edgetype = proceed 
+State=2 & type = normal & eventtype = stock | edgetype = begin & volume % 3 == 0 
+end
+
+
+Number Of Matches Found: 15668
+Selectivity :0.12434920634920635 matches/event
+
+
+selectivity= 0.014, w = 20
+898, w = 100
+1.49, w 50
+0.038, w = 25

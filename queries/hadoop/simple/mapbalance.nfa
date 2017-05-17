@@ -1,0 +1,7 @@
+selectionStrategy = skip-till-any-match | timeWindow = 60000
+State=1 & type = normal & eventtype = balance | edgetype = begin & value == 1
+State=2 & type = normal & eventtype = MapStart | edgetype = begin  
+State=3 & type = normal & eventtype = balance | edgetype = begin & value == 0
+State=4 & type = normal & eventtype = MapFinish | edgetype = begin & taskId == $2.taskId & attemptId == $2.attemptId
+State=5 & type = normal & eventtype = balance | edgetype = begin & value == 1
+end

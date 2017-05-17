@@ -1,0 +1,3 @@
+SelectionStrategy = skip-till-any-match | TimeWindow = 25 | partitionAttribute = symbol
+State=1 & type = normal & eventtype = stock | edgetype = begin & price % 500 = 0
+end

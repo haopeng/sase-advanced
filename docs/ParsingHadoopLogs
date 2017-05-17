@@ -1,0 +1,39 @@
+Which class to use?
+
+
+======Ganglia=======
+1. GangliaLogPreprocessorYeeha
+ Transfer original Ganglia events to better formatted events
+
+=====Loadbalance
+(1) LoadBalanceEventGenerator(Done) (balance.txt)  
+(2)NumericLoadBalanceEventGenerator(done) (balance-numeric.txt: average value of cpu -user -event)
+(3)LoadBalanceStandardDeviationEventGenerator(done) (balance-standarddeviatioin.txt: Standard-deviation of cpu-user-event)
+
+======Hadoop=========
+1. parsing
+(1) DataMergeParser (done) (user logs) (MergeStart/MergeFinish)
+(2) HadoopDataActivityParser (done) (user logs) (HadoopDataActivity)
+(3) HadoopJobParser(done) ( job tracker (head)logs) (JobStart/JobFinish)
+(4) JobHistoryParser(done) (head node history/done)  (MapStart/MapFinish/ReduceStart/ReduceFinish)
+(5) RequestParser(done)(jtnn logs, task tracker) (RequestStart/RequestFinish)
+(6) PullDataParser(done)(pull-start: head; pull-finish: userlogs) (PullStart/Finish)
+(7)PairGenerator/MapReducePairGenerator/--> PeriodEventGenerator(done)
+
+*(8)SpillParser(Todo)?? Ask boduo. Depends on graph. Later.It is actually the data acitvity data!
+
+
+
+===Visualize======
+
+
+(1)HadoopDataActivityVisualizer
+
+
+=======================
+2. GangliaHadoopEventSort
+Transfer to single type!!!
+
+
+=========Explain
+edu.umass.cs.sase.explanation.UI.ExplainUI

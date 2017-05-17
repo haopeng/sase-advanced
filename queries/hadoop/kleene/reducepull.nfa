@@ -1,0 +1,5 @@
+selectionStrategy = skip-till-any-match | timeWindow = 60000 | partitionAttribute = taskId
+State=1 & type = normal & eventtype = ReduceStart | edgetype = begin  
+State=2 & type = kleeneClosure  & eventtype = PullFinish | edgetype = begin  | edgetype = take | edgetype = proceed
+State=3 & type = normal & eventtype = ReduceFinish | edgetype = begin & nodeNumber == $2.nodeNumber
+end

@@ -1,0 +1,8 @@
+selectionStrategy = skip-till-any-match | timeWindow = 360000000 | partitionAttribute = jobId
+State=1 & type = normal & eventtype = JobStart | edgetype = begin & jobId == 1115040014
+State=2 & type = kleeneClosure  & eventtype = HadoopDataActivity | edgetype = begin & jobId == 1115040014 | edgetype = take & jobId == 1115040014| edgetype = proceed & jobId == 1115040014
+State=3 & type = normal & eventtype = JobFinish | edgetype = begin & jobId == 1115040014
+end
+
+
+# bytes

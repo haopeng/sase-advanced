@@ -1,0 +1,7 @@
+SelectionStrategy = skip-till-any-match | TimeWindow = 25 | partitionAttribute = symbol
+State=1 & type = normal & eventtype = stock | edgetype = begin
+State=2 & type = normal & eventtype = stock | edgetype = begin
+State=3 & type = normal & eventtype = stock | edgetype = begin
+State=4 & type = normal & eventtype = stock | edgetype = begin
+State=5 & type = normal & eventtype = stock | edgetype = begin
+end

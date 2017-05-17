@@ -1,0 +1,5 @@
+PullFinish-TimeSeriesFrequency
+PullPeriod-TimeSeriesFrequency
+PullStart-TimeSeriesFrequency
+HadoopDataActivity-value-TimeSeriesMean
+HadoopDataActivity-TimeSeriesFrequency

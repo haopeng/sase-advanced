@@ -1,0 +1,6 @@
+SelectionStrategy = skip-till-any-match | TimeWindow = 75 | partitionAttribute = symbol
+State=1 & type = kleeneClosure  & eventtype = stock | edgetype = begin  & symbol == 1 | edgetype = take & symbol == 1  | edgetype = proceed
+State=2 & type = normal & eventtype = stock | edgetype = begin & symbol == 1 
+end
+
+

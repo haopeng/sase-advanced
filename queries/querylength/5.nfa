@@ -1,0 +1,12 @@
+SelectionStrategy = skip-till-any-match | TimeWindow = 50 | partitionAttribute = symbol
+State=1 & type = kleeneClosure  & eventtype = stock | edgetype = begin  & price % 3 == 0 & volume > 150 | edgetype = take & price % 3 == 0 & volume > 150  | edgetype = proceed 
+State=2 & type = normal & eventtype = stock | edgetype = begin & volume < 150
+State=3 & type = kleeneClosure  & eventtype = stock | edgetype = begin  & price % 5 == 0 & volume > 150 | edgetype = take & price % 5 == 0 & volume > 150  | edgetype = proceed 
+State=4 & type = normal & eventtype = stock | edgetype = begin & volume < 150  
+State=5 & type = kleeneClosure  & eventtype = stock | edgetype = begin  & price % 7 == 0 & volume > 150 | edgetype = take & price % 7 == 0 & volume > 150  | edgetype = proceed 
+State=6 & type = normal & eventtype = stock | edgetype = begin & volume < 150
+State=7 & type = kleeneClosure  & eventtype = stock | edgetype = begin  & price % 11 == 0 & volume > 150 | edgetype = take & price % 11 == 0 & volume > 150  | edgetype = proceed 
+State=8 & type = normal & eventtype = stock | edgetype = begin & volume < 150
+State=9 & type = kleeneClosure  & eventtype = stock | edgetype = begin  & price % 13 == 0 & volume > 150 | edgetype = take & price % 13 == 0 & volume > 150  | edgetype = proceed 
+State=10 & type = normal & eventtype = stock | edgetype = begin & volume < 150
+end

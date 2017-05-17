@@ -1,0 +1,7 @@
+selectionStrategy = skip-till-any-match | timeWindow = 720000000 | partitionAttribute = jobId
+State=1 & type = normal & eventtype = JobStart | edgetype = begin
+State=2 & type = kleeneClosure  & eventtype = ReducePeriod | edgetype = begin | edgetype = take | edgetype = proceed
+State=3 & type = normal & eventtype = JobFinish | edgetype = begin
+end
+
+#200 hours

@@ -1,0 +1,8 @@
+SelectionStrategy = skip-till-any-match | TimeWindow = 25 | partitionAttribute = symbol
+State=1 & type = kleeneClosure  & eventtype = stock | edgetype = begin  & price % 500 = 0 | edgetype = take &price %500 != 0 &  price % 3 != 0 & volume > 150  | edgetype = proceed 
+State=2 & type = normal & eventtype = stock | edgetype = begin &price %500 != 0 &  volume < 150 
+end
+
+
+selectivity= 0.06
+0.144, w = 25

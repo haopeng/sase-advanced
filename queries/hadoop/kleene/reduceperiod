@@ -1,0 +1,5 @@
+selectionStrategy = skip-till-any-match | timeWindow = 36000000 | partitionAttribute = symbol
+State=1 & type = normal & eventtype = JobStart | edgetype = begin
+State=2 & type = kleeneClosure  & eventtype = ReduceFinish | edgetype = begin | edgetype = take | edgetype = proceed
+State=3 & type = normal & eventtype = JobFinish | edgetype = begin
+end
